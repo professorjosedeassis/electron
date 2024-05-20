@@ -1,0 +1,23 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "Tutorial Electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/professorjosedeassis/electron.git"
+  },
+  "author": "Professor José de Assis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/professorjosedeassis/electron/issues"
+  },
+  "homepage": "https://github.com/professorjosedeassis/electron#readme",
+  "devDependencies": {
+    "electron": "^30.0.5"
+  }
+}
