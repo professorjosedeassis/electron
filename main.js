@@ -32,6 +32,23 @@ const aboutWindow = () => {
   about.loadFile('./src/views/sobre.html')
 }
 
+// Janela Secundária
+const childWindow = () => {
+  const father = BrowserWindow.getFocusedWindow()
+  if (father) {
+    const child = new BrowserWindow({
+      width: 640,
+      height: 480,
+      icon: './src/public/img/pc.png',
+      autoHideMenuBar: true,
+      resizable: false,
+      parent: father,
+      modal: true      
+    })
+    child.loadFile('./src/views/child.html')
+  }
+}
+
 app.whenReady().then(() => {
   createWindow()
   //aboutWindow()
@@ -50,6 +67,10 @@ const template = [
   {
     label: 'Arquivo',
     submenu: [
+      {
+        label: 'Janela Secundária',
+        click: () => childWindow()
+      },
       {
         label: 'Sair',
         click: () => app.quit(),
