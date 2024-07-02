@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- evitar ataques de Cross Site Scripting (injeção de dados) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
     <title>Electron tutorial</title>
 </head>
+
 <body>
     <h1>Hello Electron</h1>
+    <footer>
+        <p id="dataAtual"></p>
+    </footer>
+
+    <!-- Processo de renderização -->
+    <script src="renderer.js"></script>
 </body>
+
 </html>
