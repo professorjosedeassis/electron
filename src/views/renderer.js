@@ -15,3 +15,15 @@ api.send("Oi!")
 api.on((event, message) => {
     console.log(`Processo de renderização recebeu uma mensagem: ${message}`)
 })
+
+function info() {
+    api.info()
+}
+
+function warning() {
+    api.warning()
+}
+
+function select() {
+    api.select()
+}
